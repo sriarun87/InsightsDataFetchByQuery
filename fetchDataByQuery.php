@@ -9,10 +9,10 @@ $cmdArguments = $common->explodeArguments($argv);
 
 // set headers
 $common->setHeaders("Accept: application/json");
-$common->setHeaders("X-Query-Key: ourMa3XMmc5jL5wD6Ca2nYdq8Wg0KQnw");
+$common->setHeaders("X-Query-Key: <<X_QUERY_KEY>>");
 
 // set curl url
-$common->curl_url = "https://insights-api.newrelic.com/v1/accounts/1833455/query?nrql=";
+$common->curl_url = "https://insights-api.newrelic.com/v1/accounts/<<ORG_ACCOUNT_ID>>/query?nrql=";
 if($cmdArguments['query']) {
     $common->curl_url = $common->curl_url . $cmdArguments['query'];
 }
